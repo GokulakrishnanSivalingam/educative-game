@@ -39,7 +39,7 @@ function Login() {
     }
 
     
-    const resp = await fetch('http://localhost:5172/login', {
+    const resp = await fetch('https://educative-game-2.onrender.com/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
