@@ -23,7 +23,7 @@ function Navbar() {
         <li><Link to="/register">Register</Link></li>
     
  
- <div className="log"><li><Link to='/login'><MdOutlineLogin/></Link></li></div>
+ <div className="log"><li><Link to='/login'><MdOutlineLogin/>  login</Link></li></div>
       </ul>
       <div className="hamburger" onClick={toggleMenu}>
         <span className="bar"></span>
