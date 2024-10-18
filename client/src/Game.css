@@ -1,0 +1,89 @@
+.option {
+    display: flex;
+}
+
+.g1 button {
+    border: 2px solid blue;
+    border-radius: 5px;
+    color: black;
+    height: 40px;
+    width: 140px;
+    margin-bottom: 30px;
+}
+
+.g1 button:hover {
+    color: white;
+}
+
+.option p {
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    margin: 20px;
+    border: 1px solid #2f3640;
+    background-color: #2f3640;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    height: 30px;
+    color: white;
+}
+
+.option p.correct {
+    background-color: green;
+    color: white;
+    border: 1px solid rgb(1, 55, 1);
+}
+
+.option p.wrong {
+    background-color: red;
+    color: white;
+    border: 1px solid rgb(1, 55, 1);
+}
+
+.score h2 {
+    background-color: rgb(76, 102, 216);
+    float: right;
+    padding: 25px;
+    border-radius: 100%;
+    margin-top: 140px;
+    margin-right: 40px;
+}
+
+@media(max-width:768px) {
+    .videocontainer {
+        width: max-content;
+        margin: 0;
+    }
+    .option {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .option p {
+        width: 110px;
+        overflow: hidden;
+    }
+    .score h2 {
+        background-color: rgb(76, 102, 216);
+        float: right;
+        padding: 5px;
+        margin-top: 20px;
+        margin-right: 4px;
+        border-radius: 5px;
+        color: white;
+        margin: 5px;
+    }
+    .title h1 {
+        margin: 10px;
+        margin-top: 30px;
+    }
+    .g1 button {
+        margin-top: 50px;
+        width: 250px;
+    }
+    .q h2 {
+        margin: 10px;
+    }
+}

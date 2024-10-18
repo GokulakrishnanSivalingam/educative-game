@@ -1,0 +1,32 @@
+.puzzle {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.puzzle h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options button {
+    background-color: #1367b1;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+.options button:hover {
+    background-color: darkblue;
+}

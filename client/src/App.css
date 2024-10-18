@@ -1,0 +1,85 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    .card-container {
+        display: flex;
+    }
+    
+    body {
+        background-color: rgb(226, 230, 232);
+    }
+    
+    .card-avs img {
+        width: 400px;
+        height: 400px;
+        border-radius: 15px;
+        margin-left: 135px;
+        margin-right: 20px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    }
+    
+    .card-avs img:hover {
+        padding: 1%;
+        transition: 0.3s;
+    }
+    
+    .card-avs h1 {
+        margin-left: 230px;
+        margin-bottom: 40px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+    }
+    
+    .container1 {
+        display: flex;
+        margin-top: 60px;
+    }
+    
+    .gif img {
+        width: 300px;
+        height: 300px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+        margin-right: 50px;
+        margin-bottom: 40px;
+    }
+    
+    .gif p {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 22px;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+    
+    .about h1 {
+        margin-top: 20px;
+    }
+    
+    @media(max-width:768px) {
+        .card-avs img {
+            width: 300px;
+            height: 300px;
+            margin: 30px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+        }
+        .card-avs img:hover {
+            padding: 1%;
+            transition: 0.3s;
+        }
+        .card-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            margin-bottom: 100px;
+        }
+        .card-avs h1 {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            margin: 10px;
+            margin-bottom: -5px;
+        }
+    }

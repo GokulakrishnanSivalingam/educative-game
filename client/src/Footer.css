@@ -1,0 +1,117 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    footer {
+        background-color: #fff;
+        ;
+        font-family: "Roboto", serif;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+    
+    .footer-section {
+        flex: 1;
+        padding: 20px;
+    }
+    
+    .footer-section h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-family: "Roboto", serif;
+        color: #1367b1;
+    }
+    
+    .footer-section p {
+        font-size: 16px;
+        color: black;
+        ;
+        margin-bottom: 20px;
+        font-family: "Roboto", serif;
+    }
+    
+    .footer-section h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-family: "Roboto", serif;
+        color: #1367b1;
+    }
+    
+    .footer-section a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        margin-bottom: 10px;
+        transition: color 0.3s;
+        font-family: "Roboto", serif;
+    }
+    
+    .footer-section a:hover {
+        color: black;
+    }
+    
+    .socials {
+        display: flex;
+        margin-top: 20px;
+    }
+    
+    .socials a {
+        color: black;
+        font-size: 20px;
+        margin-right: 15px;
+        transition: color 0.3s;
+    }
+    
+    .socials a:hover {
+        color: black;
+    }
+    
+    .newsletter input[type="email"] {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 25px;
+        background-color: darkgray;
+        color: #000;
+    }
+    
+    .newsletter button {
+        padding: 10px 25px;
+        border: none;
+        border-radius: 25px;
+        background-color: #e91e63;
+        color: #fff;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        transition: background-color 0.3s;
+    }
+    
+    .newsletter button:hover {
+        background-color: #c2185b;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding: 20px;
+        background-color: rgb(217, 215, 215);
+        font-family: "Roboto", serif;
+        color: black;
+    }
+    
+    .footer-bottom p {
+        margin: 0;
+        font-size: 14px;
+        font-family: "Roboto", serif;
+        color: #1367b1;
+    }
+    
+    ul li a {
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+    }
