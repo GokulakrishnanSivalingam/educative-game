@@ -8,6 +8,7 @@ import Footer from './Footer';
 import as from '../cg.gif'
 import aa from '../gg.gif';
 import "./App.css"
+import {Link } from "react-router-dom"
 
 function App() {
   
@@ -19,12 +20,12 @@ function App() {
     <div className="card-container">
  <div className="card-avs"> 
   <h1>Riddle</h1>
-<a href="/g2">  <img src={aa} alt="" /></a>
+<Link to="/g2">  <img src={aa} alt="" /></Link>
  
   </div>
   <div className="card-avs">  
     <h1>Scenario quizz</h1>
- <a href="/video/1"><img src={as} alt="" /></a> 
+ <Link to="/video/1"><img src={as} alt="" /></Link> 
 
 </div>
 </div> 

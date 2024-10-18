@@ -43,7 +43,7 @@ function Register() {
     if (!isValid) {
       return; 
     }
-    const resp = await fetch("http://localhost:5172/register", {
+    const resp = await fetch("https://educative-game-2.onrender.com/register", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

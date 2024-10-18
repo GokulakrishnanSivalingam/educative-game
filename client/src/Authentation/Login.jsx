@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import Navbar from '../Navbar';
 import { FaUser } from "react-icons/fa";
+import {Link } from "react-router-dom"
 
 
 function Login() {
@@ -39,7 +40,7 @@ function Login() {
     }
 
     
-    const resp = await fetch('http://localhost:5172/login', {
+    const resp = await fetch('https://educative-game-2.onrender.com/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -94,7 +95,7 @@ function Login() {
             </center>
           </form>
           <br />
-          <p>do not have any account? <a href="/register">register</a></p>
+          <p>do not have any account? <Link to="/register">register</Link></p>
         </fieldset></div>
         <br />
       </div>
