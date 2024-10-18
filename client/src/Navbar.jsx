@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { MdOutlineLogin } from "react-icons/md";
-import {Link} from 'react-router-dom';
+
 
 
 function Navbar() {
@@ -17,8 +17,8 @@ function Navbar() {
       <div className="logo">AVLearn</div>
       <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
         <li> <a href="/">Home</a></li>
-        <li> <Link to="/">About</Link></li>
-        <li><Link to="/feedback">Feedback</Link></li>
+        <li> <a to="/">About</a></li>
+        <li><a to="/feedback">Feedback</a></li>
         <li><a href="/register">Register</a></li>
     
  

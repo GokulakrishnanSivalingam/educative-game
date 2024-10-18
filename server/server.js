@@ -5,7 +5,7 @@ const cors = require('cors');
 app.use(cors());
 const port = 5172;
 
-///const collections = new collection({name: "avs", password: "iam"});collections.save();///
+
 const mongoose = require("mongoose")
 const connect = mongoose.connect("mongodb://localhost:27017/gamification");
 connect.then(() => {
