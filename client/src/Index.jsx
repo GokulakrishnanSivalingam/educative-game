@@ -4,7 +4,7 @@ import { useState } from "react";
 import App from "./App.jsx";
 import Login from "./Authentation/Login.jsx";
 import Register from "./Authentation/Register.jsx"; 
-import DrawingPad from"./Drawing.jsx"
+
 import Game from './Game.jsx'
 import Feedback from './Feedback.jsx'
 import Game2 from './Game2.jsx'
