@@ -20,7 +20,7 @@ function Navbar() {
         <li> <Link to="/">Home</Link></li>
         <li> <Link to="/">About</Link></li>
         <li><Link to="/feedback">Feedback</Link></li>
-        <li><a href="/register">Register</a></li>
+        <li><Link to="/register">Register</Link></li>
     
  
  <div className="log"><li><Link to='/login'><MdOutlineLogin/></Link></li></div>
