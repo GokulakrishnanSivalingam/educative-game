@@ -13,11 +13,11 @@ A platform designed to enhance education through gamified learning experiences, 
 
 ## 🛠️ Technologies Used
 
-![React](https://img.shields.io/badge/React-17.0.1-blue.svg) 
-![Node.js](https://img.shields.io/badge/Node.js-14.17.5-green.svg) 
-![Express.js](https://img.shields.io/badge/Express.js-4.17.1-lightgrey.svg)
-![MongoDB](https://img.shields.io/badge/MongoDB-4.4-brightgreen.svg)
-![CSS](https://img.shields.io/badge/CSS-3-blue.svg)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+
 
 ## 📊 Language & Repo Stats
 
