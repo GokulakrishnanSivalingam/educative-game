@@ -9,10 +9,14 @@ A platform designed to enhance education through gamified learning experiences, 
 - 📊 Leaderboards to boost competition and engagement
 - 📱 Responsive design for mobile and desktop
 
-## 📸 Screenshots
-![Platform Screenshot](./images/s1.png)
-![Platform Screenshot](./images/s2.png)
-![Platform Screenshot](./images/s3.png)
+  ## 📊 Language Statistics
+
+The following languages are used in this repository:
+
+- **JavaScript**: ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-f7df1e?style=flat-square&logo=javascript&logoColor=black)
+- **HTML**: ![HTML](https://img.shields.io/badge/HTML-5-e34f26?style=flat-square&logo=html5&logoColor=white)
+- **CSS**: ![CSS](https://img.shields.io/badge/CSS-3-1572B6?style=flat-square&logo=css3&logoColor=white)
+- **JSON**: ![JSON](https://img.shields.io/badge/JSON-black?style=flat-square&logo=json&logoColor=white)
 
 ## 🛠️ Technologies Used
 
@@ -20,6 +24,13 @@ A platform designed to enhance education through gamified learning experiences, 
 - **Backend**: ![Node.js](https://img.shields.io/badge/Node.js-14.17.5-green.svg) ![Express.js](https://img.shields.io/badge/Express.js-4.17.1-lightgrey.svg)
 - **Database**: ![MongoDB](https://img.shields.io/badge/MongoDB-4.4-brightgreen.svg)
 - **Styling**: ![CSS](https://img.shields.io/badge/CSS-3-blue.svg)
+   
+## 📸 Screenshots
+![Platform Screenshot](./images/s1.png)
+![Platform Screenshot](./images/s2.png)
+![Platform Screenshot](./images/s3.png)
+
+
 
 ## 📊 Language & Repo Stats
 
