@@ -10,7 +10,9 @@ A platform designed to enhance education through gamified learning experiences, 
 - 📱 Responsive design for mobile and desktop
 
 ## 📸 Screenshots
-![Platform Screenshot](./gamification.png)
+![Platform Screenshot](./images/s1.png)
+![Platform Screenshot](./images/s2.png)
+![Platform Screenshot](./images/s3.png)
 
 ## 🛠️ Technologies Used
 
