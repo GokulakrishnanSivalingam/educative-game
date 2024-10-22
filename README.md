@@ -29,11 +29,12 @@ A platform designed to enhance education through gamified learning experiences, 
 ![Last Commit](https://img.shields.io/github/last-commit/GokulakrishnanSivalingam/educative-game)
 ![Issues](https://img.shields.io/github/issues/GokulakrishnanSivalingam/educative-game)
 ![Pull Requests](https://img.shields.io/github/issues-pr/GokulakrishnanSivalingam/educative-game)
-   
+   .
+
 ## 📸 Screenshots
-![Platform Screenshot](./images/s1.png)
-![Platform Screenshot](./images/s2.png)
-![Platform Screenshot](./images/s3.png)
+<img src="./images/s1.jpg" alt="Platform Screenshot" width="300" />          <img src="./images/s2.jpg" alt="Platform Screenshot" width="300" />           <img src="./images/s3.jpg" alt="Platform Screenshot" width="300" />
+
+
 
 
 
