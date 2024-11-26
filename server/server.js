@@ -1,94 +1,73 @@
 const express = require('express');
 const app = express();
-const path = require('path');
 const cors = require('cors');
+const bcrypt = require('bcrypt');
+const mongoose = require('mongoose');
+
 app.use(cors());
-const port = 5172;
-
-
-const mongoose = require("mongoose")
-const connect = mongoose.connect("mongodb://localhost:27017/gamification");
-connect.then(() => {
-    console.log("login connected")
-})
-
-const userschema = new mongoose.Schema({
-    email: {
-        type: String,
-        required: true
-    },
-    password: {
-        type: String,
-        required: true
-    }
-
-});
-const collection = new mongoose.model("login", userschema);
-
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const port = 5172;
+const uri = "mongodb+srv://game:game@cluster1.xfa43.mongodb.net/game"
+mongoose.connect(uri)
+    .then(() => {
+        console.log('Database connected');
+    })
+    .catch((err) => {
+        console.error('Database connection error:', err.message);
 
+    });
 
-
-app.post("/login", async(req, res) => {
-    const datas = {
-        email: req.body.email,
-        password: req.body.password
-    };
-
-    try {
-
-        const userdata = await collection.insertMany(datas);
-        console.log(userdata);
-        res.status(200).json()
-
-
-    } catch (error) {
-        res.status(500).send("Server Error");
-    }
-});
-
-const connects = mongoose.connect("mongodb://localhost:27017/gamification");
-connects.then(() => {
-    console.log("login connected")
-})
-
-const userschemass = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
         required: true
-    },
-    confirmpassword: {
-        type: String,
-        required: true
-    },
-
+    }
 });
-const collectionss = new mongoose.model("register", userschemass);
-app.post("/register", async(req, res) => {
-    const datass = {
 
-        email: req.body.email,
-        password: req.body.password,
-        confirmpassword: req.body.confirmpassword
-    };
+const User = mongoose.model('user', userSchema);
 
+app.post('/login', async(req, res) => {
+    const { email, password } = req.body;
     try {
-        const userdatass = await collectionss.insertMany(datass);
-        console.log(userdatass);
-        res.status(200).json(userdatass);
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(400).json({ message: 'Invalid email or password' });
+        }
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(400).json({ message: 'Invalid email or password' });
+        }
+        res.status(200).json({ message: 'Login successful', user });
     } catch (error) {
-        res.status(500).send("Server Error");
+        res.status(500).json({ message: 'Server error' });
     }
 });
 
 
+app.post('/register', async(req, res) => {
+    const { email, password } = req.body;
+    try {
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ message: 'Email already in use' });
+        }
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const newUser = new User({ email, password: hashedPassword });
+        await newUser.save();
+        console.log(newUser);
+        res.status(200).json({ message: 'User registered successfully', newUser });
+    } catch (error) {
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
 app.listen(port, () => {
-    console.log(`server is running at ${port}`)
+    console.log(`Server is running on port ${port}`);
 });
