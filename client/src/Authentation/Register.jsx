@@ -11,6 +11,7 @@ function Register() {
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [confirmpasswordError, setConfirmPasswordError] = useState('');
+  const [message,setMessage]=useState('')
   
   async function Log(e) {
     e.preventDefault();
@@ -54,11 +55,12 @@ function Register() {
         confirmpassword
       }),
     })
+    const data=await resp.json();
     if (resp.ok) {
     
-      navigate('/'); 
+      navigate('/login'); 
     } else {
-      
+      setMessage(data.message);
       console.log("Login failed");
     }
 
@@ -100,9 +102,11 @@ function Register() {
           />   
            {confirmpasswordError && <p className="error-text">{confirmpasswordError}</p>} <br /><br />
      <center><div className="auth"><button onClick={Log}>register</button></div></center>   
-     
+     <div className="servererror"><p>{message}</p>
+     </div>
         </form>
       
+        <p>I  account? <a href="/login">login</a></p>
         </fieldset></div>  <br />
     
 
