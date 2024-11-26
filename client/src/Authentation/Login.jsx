@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import Navbar from '../Navbar';
 import { FaUser } from "react-icons/fa";
-import {Link } from "react-router-dom"
 
 
 function Login() {
@@ -14,6 +13,7 @@ function Login() {
 
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const [message,setMessage]=useState('');
 
   async function Log(e) {
     e.preventDefault();
@@ -49,12 +49,16 @@ function Login() {
         email,
         password,
       }),
+      
     });
+    const data = await resp.json();
 
     if (resp.ok) {
       navigate('/'); 
+
     } else {
       console.log('Login failed');
+      setMessage(data.message);
     }
   }
 
@@ -93,9 +97,10 @@ function Login() {
             <center>
              <div className="auth"> <button type="submit" onClick={Log}>Login</button></div>
             </center>
+        <div className="servererror"> <p>{message}</p></div>   
           </form>
           <br />
-          <p>do not have any account? <Link to="/register">register</Link></p>
+          <p>do not have any account? <a href="/register">register</a></p>
         </fieldset></div>
         <br />
       </div>
