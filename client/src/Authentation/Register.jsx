@@ -21,15 +21,26 @@ function Register() {
    
     setEmailError('');
     setPasswordError('');
-    setConfirmPasswordError
+    setConfirmPasswordError('');
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   
     if (!email) {
       setEmailError('Email is required');
       isValid = false;
     }
+    else if(!emailRegex.test(email))
+    {
+      setEmailError(`enter correct email "@gmail.com"`);
+      isValid = false;
+    }
 
     if (!password) {
       setPasswordError('Password is required');
+      isValid = false;
+    }
+    else if(password.length < 8)
+    {
+      setPasswordError('Password is very weak');
       isValid = false;
     }
     if (!confirmpassword) {
@@ -79,7 +90,7 @@ function Register() {
         <form >
           <label htmlFor="email">Email</label><br />
           <input 
-            type="text" 
+            type="email" 
             name="email" 
             onChange={(e) => setEmail(e.target.value)} 
             required
@@ -101,12 +112,12 @@ function Register() {
             
           />   
            {confirmpasswordError && <p className="error-text">{confirmpasswordError}</p>} <br /><br />
-     <center><div className="auth"><button onClick={Log}>register</button></div></center>   
+     <center><div className="auth"><button type="submit" onClick={Log}>register</button></div></center>   
      <div className="servererror"><p>{message}</p>
      </div>
         </form>
       
-        <p>I  account? <a href="/login">login</a></p>
+        <p>I have account? <a href="/login">login</a></p>
         </fieldset></div>  <br />
     
 
