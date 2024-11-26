@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import Navbar from '../Navbar';
 import { FaUser } from "react-icons/fa";
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 
 
 function Login() {
@@ -39,7 +40,7 @@ function Login() {
       return; 
     }
 
-    
+  
     const resp = await fetch('https://educative-game-2.onrender.com/login', {
       method: 'POST',
       headers: {
@@ -61,11 +62,22 @@ function Login() {
       setMessage(data.message);
     }
   }
+  const handleSuccess = (response) => {
+    console.log('Login Success:', response);
+    const userInfo = response.credential; 
+    console.log(userInfo);
+    navigate('/');
+    
+  };
+
+  const handleError = () => {
+    console.error('Login Failed');
+  };
 
   return (
     <>
       <div>
-        <Navbar></Navbar>
+       
         <div className="cont">
         <fieldset>
      <center>  <div className="icon"><h1><FaUser/></h1></div> </center>  <br />
@@ -96,6 +108,17 @@ function Login() {
             <br />
             <center>
              <div className="auth"> <button type="submit" onClick={Log}>Login</button></div>
+             <GoogleOAuthProvider clientId="848508527235-cbrsoqi49lr88rfiivj0nuc2fhrgugmm.apps.googleusercontent.com">
+      <div>
+        <p>or</p>
+        <GoogleLogin
+          onSuccess={handleSuccess}
+          onError={handleError}
+          isSigedIn={true}
+          cookiePolicy={'single_host_origin '}
+        />
+      </div>
+    </GoogleOAuthProvider>
             </center>
         <div className="servererror"> <p>{message}</p></div>   
           </form>
