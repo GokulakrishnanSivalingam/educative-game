@@ -35,6 +35,10 @@
             margin: 5px;
         }
         
+        a {
+            text-decoration: none;
+        }
+        
         .auth button {
             background-color: blue;
             color: white;
@@ -50,6 +54,7 @@
         .error-text {
             color: red;
             font-size: 12px;
+            margin: 6px;
         }
         
         input {
